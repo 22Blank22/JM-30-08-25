@@ -1,0 +1,11 @@
+@if(isSquare) {
+<div class="container square" [class.changed]="changed">
+  <p class="number">{{ num }}</p>
+  <p>{{ unit }}</p>
+</div>
+} @else {
+<div class="container rectangle" [class.changed]="changed">
+  <p class="number">{{ num }}</p>
+  <p>{{ unit }}</p>
+</div>
+}

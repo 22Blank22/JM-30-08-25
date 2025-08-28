@@ -1,0 +1,65 @@
+<div class="count-up-timer">
+  <h2>Married since</h2>
+  <p class="start-date">{{ getStartDate() }}</p>
+
+  <div class="time-elapsed">
+    <app-digit
+      [num]="transformTimeElapsed().years"
+      unit="years"
+      [changed]="digitsChanged[0]"
+    ></app-digit>
+    <app-digit
+      [num]="transformTimeElapsed().months"
+      unit="months"
+      [changed]="digitsChanged[1]"
+    ></app-digit>
+    <app-digit
+      [num]="transformTimeElapsed().days"
+      unit="days"
+      [changed]="digitsChanged[2]"
+    ></app-digit>
+    <app-digit
+      [num]="transformTimeElapsed().hours"
+      unit="hours"
+      [changed]="digitsChanged[3]"
+    ></app-digit>
+    <app-digit
+      [num]="transformTimeElapsed().minutes"
+      unit="minutes"
+      [changed]="digitsChanged[4]"
+    ></app-digit>
+    <app-digit
+      [num]="transformTimeElapsed().seconds"
+      unit="seconds"
+      [changed]="digitsChanged[5]"
+    ></app-digit>
+  </div>
+
+  <div class="total-time-elapsed">
+    <h2>Total time:</h2>
+    <app-digit
+      [num]="getTotalDays()"
+      unit="total days"
+      [isSquare]="false"
+      [changed]="digitsChanged[2]"
+    ></app-digit>
+    <app-digit
+      [num]="getTimeElapsed().hours"
+      unit="total hours"
+      [isSquare]="false"
+      [changed]="digitsChanged[3]"
+    ></app-digit>
+    <app-digit
+      [num]="getTimeElapsed().minutes"
+      unit="total minutes"
+      [isSquare]="false"
+      [changed]="digitsChanged[4]"
+    ></app-digit>
+    <app-digit
+      [num]="getTimeElapsed().seconds"
+      unit="total seconds"
+      [isSquare]="false"
+      [changed]="digitsChanged[5]"
+    ></app-digit>
+  </div>
+</div>

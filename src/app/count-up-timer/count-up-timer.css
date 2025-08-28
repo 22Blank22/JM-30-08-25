@@ -1,0 +1,28 @@
+.count-up-timer {
+  text-align: center;
+  font-family: sans-serif;
+  color: #5cbdb9;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.start-date {
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  .count-up-timer {
+    padding: 8px;
+  }
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+  }
+  .start-date {
+    font-size: 0.95em;
+  }
+}
